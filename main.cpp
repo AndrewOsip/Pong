@@ -12,19 +12,20 @@ int main()
     SDL_Window* window = nullptr;
     SDL_Texture* squareTexture;
 
-//__________________________MENU___________________________________________________________
+    //__________________________MENU___________________________________________________________
     std::cout << "Main menu\n"
               << "Play with Bot(press b)\n"
               << "Play with another Player(press p)" << std::endl;
 
     std::string modeSwitcher;
     getline(std::cin, modeSwitcher);
-//__________________________END_MENU______________________________________________________________
+    //__________________________END_MENU______________________________________________________________
 
-    EGameType gameType{EGameType::UNDEFINED};
+    EGameType gameType{ EGameType::UNDEFINED };
     if (modeSwitcher == "b") {
         gameType = EGameType::BOT;
-    } else if (modeSwitcher == "p") {
+    }
+    else if (modeSwitcher == "p") {
         gameType = EGameType::PLAYER;
     }
 
